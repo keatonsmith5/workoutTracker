@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const workoutSchema = new Schema(
-  {
+const workoutSchema = new Schema({
     day: {
       type: Date,
       default: () => new Date()
@@ -38,14 +37,13 @@ const workoutSchema = new Schema(
         }
       }
     ]
-  },
+},
   {
     toJSON: {
       // include any virtual properties when data is requested
       virtuals: true
     }
-  }
-);
+  });
 
 // adds a dynamically-created property to schema
 workoutSchema.virtual("totalDuration").get(function () {
