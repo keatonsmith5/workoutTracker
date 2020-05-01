@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 // TODO: import required model/s
-conts db = require("../models");
+const db = require("../models");
 
 // TODO: and add code to the routes so that the app functions correctly
 
